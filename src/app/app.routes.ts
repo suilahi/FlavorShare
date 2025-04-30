@@ -15,8 +15,9 @@ export const routes: Routes = [
             component: RecipeListComponent
         },
         
-        {path: 'recipe-detail',
-            component: RecipeDetailComponent
-        }
+
+        { path: 'recipes', component: RecipeListComponent },
+        { path: 'recipes/:id', component: RecipeDetailComponent },
+        { path: '', redirectTo: '/recipes', pathMatch: 'full' }
 
 ];
