@@ -14,6 +14,7 @@ import { Router } from '@angular/router';
 export class RecipeListComponent implements OnInit {
   recipes: any[] = [];
 selectedRecipe: any;
+  http: any;
 
   constructor(private recipesService: RecipesService,
     private router: Router
@@ -25,9 +26,9 @@ selectedRecipe: any;
       this.recipes = data.meals; 
     });
   }
-
+  
   showDetails(recipe: any): void {
     this.router.navigate(['/recipes', recipe.idMeal]);
   }
-  
+
 }

@@ -12,8 +12,11 @@ export class RecipesService {
     const url = 'https://www.themealdb.com/api/json/v1/1/filter.php?i=chicken_breast';
     return this.http.get(url);
   }
-  
-  
-
-
+  recipeDetail(id: string) {
+    const url = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`;
+    return this.http.get(url);
+  }
+  getRecipeById(id: string) {
+    return this.http.get(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`);
+  } 
 }
