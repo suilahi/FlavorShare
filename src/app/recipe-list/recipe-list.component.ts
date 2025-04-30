@@ -22,7 +22,7 @@ selectedRecipe: any;
   ) {}
 
   ngOnInit(): void {
-    this.recipesService.recipelist().subscribe((data: any) => {
+    this.recipesService.getrecipe().subscribe((data: any) => {
       this.recipes = data.meals; 
     });
   }

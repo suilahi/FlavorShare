@@ -16,6 +16,6 @@ export class AppComponent {
   title = 'FlavorShare';
   constructor(private  RecipesService : RecipesService) { }
   ngOnInit() {
-    this.RecipesService.recipelist().subscribe((data: any) => {});
+    this.RecipesService.getrecipe().subscribe((data: any) => {});
   };
   }
